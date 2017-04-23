@@ -1,3 +1,7 @@
 set -e
 shopt -s dotglob
 echo "---> Installing application source..."
+echo LoadModule remoteip_module modules/mod_remoteip.so
+echo RemoteIPHeader X-Forwarded-For
+echo RemoteIPTrustedProxy 192.168.1.10
+
